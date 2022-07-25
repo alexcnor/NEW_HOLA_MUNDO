@@ -29,8 +29,8 @@ steps:
     CleanTargetFolder: true
     preserveTimestamp: true
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: drop'
+  displayName: 'Publish Artifact: webapp-runner-7.0.57.1.jar'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
+    ArtifactName: 'webapp-runner-7.0.57.1.jar'
     publishLocation: 'Container'
