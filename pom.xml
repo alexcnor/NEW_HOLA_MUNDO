@@ -23,17 +23,17 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-    <configuration>
-	<processTypes>
-     		<web>java $JAVA_OPTS -jar target/dependency/webapp-runner-7.0.57.1.jar --session-store memcache --port $PORT target/hellojavawebapprunner</web>
-  	</processTypes>
-    </configuration>
     <build>
         <plugins>
 	   <plugin>
         	<groupId>com.heroku.sdk</groupId>
         	<artifactId>heroku-maven-plugin</artifactId>
         	<version>2.0.8</version>
+		<configuration>
+		    <processTypes>
+     			<web>java $JAVA_OPTS -jar target/dependency/webapp-runner-7.0.57.1.jar --session-store memcache --port $PORT target/hellojavawebapprunner</web>
+  		    </processTypes>
+    		</configuration>
            </plugin>
 	   <plugin>
 		<artifactId>maven-compiler-plugin</artifactId>
